@@ -1,0 +1,4 @@
+[console_scripts]
+heic-to-jpg = heic_to_jpg.cli:main
+heic2jpg = heic_to_jpg.cli:main
+

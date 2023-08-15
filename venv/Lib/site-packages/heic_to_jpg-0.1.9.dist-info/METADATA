@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: heic-to-jpg
+Version: 0.1.9
+Summary: Convert .heic images to .jpg
+Home-page: https://github.com/creimers/heic-to-jpg
+Author: Christoph Reimers
+Author-email: christoph@superservice-international.com
+License: MIT license
+Keywords: heic_to_jpg
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Click (>=7.0)
+
+# `heic-to-jpg` 📸
+
+CLI tool for converting `HEIC` images to `jpg`.
+
+Essentially, this is just a thin wrapper around imagemagick's [`convert`](https://imagemagick.org/script/convert.php) cli.
+
+Motivation: When transfering images from an iPhone to a Mac via airdrop, they are being transfered as `HEIC`. Oftentime though, another format (such as `jpg`) is required to further make use of those images.
+
+👉 ⚠️ Please note that [imagemagick](https://imagemagick.org/script/download.php) is a prerequisite for this to work.
+
+👉 ⚠️ Please note that this has been tested on macOS only. There might be issues on other operating systems ([Linux](https://github.com/creimers/heic-to-jpg/issues/1), [Windows](https://github.com/creimers/heic-to-jpg/issues/2)).
+
+## installation
+
+`pip install heic-to-jpg`
+
+## usage
+
+`heic-to-jpg -s ~/path/to/source [--keep] [--debug None|Trace|All]`
+
+or
+
+`heic2jpg -s ~/path/to/source [--keep] [--debug None|Trace|All]` 
+
+`~/path/to/source` can both be a directory or a single `.HEIC` file. Without the `--keep` flag, the original file is deleted after conversion.
+
+
