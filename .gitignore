@@ -1,5 +1,6 @@
 # Ignore virtual environment
 venv/
 
-# Ignore image files 
-images/
+# Ignore everything in the images folder except the README.md
+images/*
+!images/README.md
